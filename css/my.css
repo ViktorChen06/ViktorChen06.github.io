@@ -1,0 +1,9 @@
+/* Here is your custom css styles. */
+@font-face {
+    font-family: 'DingTalk JinBuTi';
+    src: url('./font/钉钉进步体0111/JinBuTi.ttf');
+}
+
+.dingFont{
+    font-family: 'DingTalk JinBuTi';
+}
