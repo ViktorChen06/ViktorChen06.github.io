@@ -7,3 +7,9 @@
 .dingFont{
     font-family: 'DingTalk JinBuTi';
 }
+
+/* @media (max-width: 768px) {
+    body {
+      font-family: 'DingTalk JinBuTi';
+    }
+  } */
