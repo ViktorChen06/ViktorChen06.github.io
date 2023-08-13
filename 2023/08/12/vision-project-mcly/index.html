@@ -4,10 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo搭建(二)--Matery主题配置, 广的技术博客">
-    <meta name="description" content="前面为大家介绍了博客的基本框架搭建:【Hexo搭建(一)】
-下面让我们接着上一篇文章挖下的坑，把博客主题更换为Matery主题吧！
-Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方式以及内置多种优秀的交互功能，深受极">
+    <meta name="keywords" content="视觉检测方案——角度检测, 广的技术博客">
+    <meta name="description" content="应用案例 | 3C-角度检测方案一、 案例背景检测物料的角度，并将角度信息，物料检测信息输出给上位机
+
+二、 项目痛点存在部分特殊物料，需要用其他算法进行检测判断NG物料
+
+三、 方案描述(1)、方案使用设备BOM
+
+
+物料设备
+型号
+数量">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +26,7 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo搭建(二)--Matery主题配置 | 广的技术博客</title>
+    <title>视觉检测方案——角度检测 | 广的技术博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -274,12 +281,12 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo搭建(二)--Matery主题配置</h1>
+                    <h1 class="description center-align post-title">视觉检测方案——角度检测</h1>
                 </div>
             </div>
         </div>
@@ -303,12 +310,8 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hello-Hexo/">
-                                <span class="chip bg-color">Hello Hexo</span>
-                            </a>
-                        
-                            <a href="/tags/Matery/">
-                                <span class="chip bg-color">Matery</span>
+                            <a href="/tags/Vision-Master/">
+                                <span class="chip bg-color">Vision Master</span>
                             </a>
                         
                     </div>
@@ -323,14 +326,14 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-30
+                    2023-08-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-30
+                    2023-08-13
                 </div>
                 
 
@@ -357,109 +360,302 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>前面为大家介绍了博客的基本框架搭建:<a href="https://viktorchen06.github.io/2023/04/27/Hexo%E6%90%AD%E5%BB%BA/">【Hexo搭建(一)】</a></p>
-<p>下面让我们接着上一篇文章挖下的坑，把博客主题更换为Matery主题吧！</p>
-<p>Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方式以及内置多种优秀的交互功能，深受极客的喜爱</p>
-<h3 id="Matery-主题下载"><a href="#Matery-主题下载" class="headerlink" title="Matery 主题下载"></a>Matery 主题下载</h3><p>打开你的博客文件夹，找到<code>themes</code>文件，打开<code>Git Bash</code>命令窗后输入 <del>（必须要把主题文件放在这个文件夹下喔）</del></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>你也可以直接网页下载然后在<code>themes</code>文件夹下解压，<a target="_blank" rel="noopener" href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">主题下载链接</a></p>
-<p>下载完成后在博客根目录的<code>_config.yml</code>文件中修改配置，把主题<code>theme</code>修改为<code>hexo-theme-matery</code>，应用主题</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># Extensions
-## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;
-## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;
-theme: hexo-theme-matery<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+                <h3 id="应用案例-3C-角度检测方案"><a href="#应用案例-3C-角度检测方案" class="headerlink" title="应用案例 | 3C-角度检测方案"></a>应用案例 | 3C-角度检测方案</h3><h4 id="一、-案例背景"><a href="#一、-案例背景" class="headerlink" title="一、 案例背景"></a>一、 案例背景</h4><pre><code>检测物料的角度，并将角度信息，物料检测信息输出给上位机
+</code></pre>
+<h4 id="二、-项目痛点"><a href="#二、-项目痛点" class="headerlink" title="二、 项目痛点"></a>二、 项目痛点</h4><pre><code>存在部分特殊物料，需要用其他算法进行检测判断NG物料
+</code></pre>
+<h4 id="三、-方案描述"><a href="#三、-方案描述" class="headerlink" title="三、 方案描述"></a>三、 方案描述</h4><h4 id="1-、方案使用设备BOM"><a href="#1-、方案使用设备BOM" class="headerlink" title="(1)、方案使用设备BOM"></a>(1)、方案使用设备BOM</h4><table>
+<thead>
+<tr>
+<th>物料设备</th>
+<th align="center">型号</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>工业面阵相机</td>
+<td align="center">MV-CU013-10GM</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>软件</td>
+<td align="center">Vision Master</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>加密狗</td>
+<td align="center">VM6100</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>光源</td>
+<td align="center">环形白光</td>
+<td align="center">2</td>
+</tr>
+</tbody></table>
+<h4 id="2-、方案设备架设示意图"><a href="#2-、方案设备架设示意图" class="headerlink" title="(2)、方案设备架设示意图"></a>(2)、方案设备架设示意图</h4><p><img src="https://xian-vforum.oss-cn-hangzhou.aliyuncs.com/2023-04-28_NVbbYems46_%E6%96%B9%E6%A1%88%E7%A4%BA%E6%84%8F%E5%9B%BE.png"></p>
+<h4 id="四、-方案流程思路"><a href="#四、-方案流程思路" class="headerlink" title="四、 方案流程思路"></a>四、 方案流程思路</h4><p><img src="https://h5.qzone.qq.com/page/photo?init=photo.v7/common/viewer2/index&picKey=NR8AVjZiQ2dBek1qRTROVGc1TURVMHU5YllaT01sdGhRIQcAcGhvdG9neg!!&ownerUin=3218589054&appid=4&topicId=V52mTbH24IQkJm0wx9es100JjA3sOzpr_NR8AVjZiQ2dBek1qRTROVGc1TURVMHU5YllaT01sdGhRIQcAcGhvdG9neg!!_0_0&pre=http://a1.qpic.cn/psc?/V52mTbH24IQkJm0wx9es100JjA3sOzpr/ruAMsa53pVQWN7FLK88i5nH75LT3rkqjbrQfB9ShwU3G8QLMHLmdE1QhRzpiTM*D5JuTgw8fN*qwVSlTezfl7xwjPxjdl7Qk7*YwToIeZnU!/m&ek=1&kp=1&pt=0&bo=iAOdAwAAAAADFyc!&tl=1&vuin=3218589054&tm=1691931600&dis_t=1691933689&dis_k=7cb5626c9d43decff6404dffa3e34f58&sce=60-3-3&rf=0-0&useqzfl=1&useinterface=1&noCloseBtn=0&inqq=1"></p>
+<p>方案思路：通过使用定位功能列表中的集中匹配算法模式，适配不同的物料；将模块检测的匹配框角度输出发送给上位机；</p>
+<p>此方案中使用了一个全局变量<code>st</code>控制<code>86分支模块</code>去执行不同分支下的匹配算法，从而实现通修改参数去使用不同的匹配算法；</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">
 
-<p>并把全局中的相关信息更改</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># Site
-title: 博客名称
-subtitle: &#39;subtitle&#39;
-description: &#39;个性签名&#39;
-keywords:
-author: &#39;作者名字&#39;
-language: &#39;zh-CN&#39;
-timezone: &#39;Asia&#x2F;Shanghai&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    public partial class UserScript:ScriptMethods,IProcessMethods
+    &#123;
+        &#x2F;&#x2F;&#x2F; &lt;summary&gt;
+        &#x2F;&#x2F;&#x2F; Initialize the field&#39;s value when compiling
+	    &#x2F;&#x2F;&#x2F; 预编译时变量初始化
+        &#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
+        &#x2F;&#x2F;the count of process
+	    &#x2F;&#x2F;执行次数计数
+         int processCount ;  
 
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># URL
-## Set your site url here. For example, if you use GitHub Page, set url as &#39;https:&#x2F;&#x2F;username.github.io&#x2F;project&#39;
-url: &#39;你的博客域名，例如我的是：http:&#x2F;&#x2F;ViktorChen06.github.io&#39;
-permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing &#39;index.html&#39; from permalinks
-  trailing_html: true # Set to false to remove trailing &#39;.html&#39; from permalinks<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>完成以上配置后记得保存</p>
-<h3 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h3><p>在<code>hexoblog</code>文件下<code>Git Bash</code>，新建以下页面</p>
-<ul>
-<li><p>标签页面</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;tags&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>生成后编辑新建的/source/tags/index.md文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: tags
-date: 2023-04-27 19:37:07
-type: &quot;tags&quot;
-layout: &quot;tags&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>下面的其它页面也是按照这个格式进行初始化配置，按照这个模板填入信息后保存即可</p>
-</li>
-<li><p>分类页面</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;categories&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: categories
-date: 2023-04-27 19:37:07
-type: &quot;categories&quot;
-layout: &quot;categories&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>关于页面</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;about&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: about
-date: 2023-04-27 19:37:07
-type: &quot;about&quot;
-layout: &quot;about&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>留言板</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;contact&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: contact
-date: 2023-04-27 19:37:07
-type: &quot;contact&quot;
-layout: &quot;contact&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>友情链接</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;friends&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: friends
-date: 2023-04-27 19:37:07
-type: &quot;friends&quot;
-layout: &quot;friends&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-<p>为了让友情页面有数据，配置完友情链接这个页面后，在博客根目录下的source文件夹新建 _data 目录，并在_data目录新建一个friends.json文件，把一些网页链接填写配置，来让这个页面有链接可以跳转，配置示例如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">[&#123;
-    &quot;avatar&quot;: &quot;http:&#x2F;&#x2F;image.luokangyuan.com&#x2F;4027734.jpeg&quot;,
-    &quot;name&quot;: &quot;BlinkFox&quot;,
-    &quot;introduction&quot;: &quot;blinkfox闪烁之狐的博客&quot;,
-    &quot;url&quot;: &quot;http:&#x2F;&#x2F;blinkfox.com&quot;,
-    &quot;title&quot;: &quot;前往学习&quot;
-   &#125;, &#123;
-    &quot;avatar&quot;: &quot;http:&#x2F;&#x2F;image.luokangyuan.com&#x2F;4027734.jpeg&quot;,
-    &quot;name&quot;: &quot;Viktor&quot;,
-    &quot;introduction&quot;: &quot;Viktor的博客&quot;,
-    &quot;url&quot;: &quot;https:&#x2F;&#x2F;viktorchen06.github.io&#x2F;&quot;,
-    &quot;title&quot;: &quot;前往学习&quot;
-   &#125;]   
-# 你可以拓展开来，但一定要按照以上的格式进行填写
-# avatar：图标
-# name:标签名字
-# introduction：链接简介
-# url: 链接
-# title：按键上的描述<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        &#x2F;&#x2F;&#x2F; &lt;summary&gt;
+        &#x2F;&#x2F;&#x2F; Initialize the field&#39;s value when compiling
+	    &#x2F;&#x2F;&#x2F; 预编译时变量初始化
+        &#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
+        public void Init()
+        &#123;
+            &#x2F;&#x2F;You can add other global fields here
+		    &#x2F;&#x2F;变量初始化，其余变量可在该函数中添加
+            processCount &#x3D; 0;  
+        &#125;
 
-<p>完成所有配置后别忘记保存，接着在根目录下<code>Git Bash</code>，直接使用hexo三件套： <code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code>，然后在服务器中输入我们的本地主机，可以发现我们的主题已经更换啦</p>
-<p>接着我们回到主题的_config.yml文件进行配置</p>
-<p><strong>注意！！！是主题文件/themes/hexo-theme-matery路径下的_config.yml配置文件，而不是全局根目录下的那个配置文件喔</strong></p>
-<p>配置文件内有着读者大量的中文备注，你可以对着说明进行修改，并没有什么特别困难的，如果有需要的话后面再出一篇配置相关的帖子 <del>又给自己挖坑了（新建文件夹）</del></p>
-<p>Waline评论系统也已完成搭建，可在我的博客找到相关的文章：<a href="https://viktorchen06.github.io/2023/04/30/%E7%94%A8Waline-Vercel%E6%90%AD%E5%BB%BA%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/">【用Waline+Vercel搭建评论系统】</a></p>
+        &#x2F;&#x2F;&#x2F; &lt;summary&gt;
+        &#x2F;&#x2F;&#x2F; Enter the process function when running code once
+	    &#x2F;&#x2F;&#x2F; 流程执行一次进入Process函数
+        &#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
+        &#x2F;&#x2F;&#x2F; &lt;returns&gt;&lt;&#x2F;returns&gt;
+        public bool Process()
+        &#123;
+            &#x2F;&#x2F;You can add your codes here, for realizing your desired function
+		    &#x2F;&#x2F;每次执行将进入该函数，此处添加所需的逻辑流程处理
+		    float[] anglef &#x3D; new float[2];  
+		    float[] scoref &#x3D; new float[2]; 
+		    int cc &#x3D; 0;	
+		    &#x2F;&#x2F;model select 
+		
+		&#x2F;&#x2F;快速匹配
+		if(st_model &#x3D;&#x3D; 0)&#123;
+			if(num &#x3D;&#x3D; 2)&#123;
+				&#x2F;&#x2F;ShowMessageBox(&quot;快速匹配执行&quot;);
+        		GetFloatArrayValue(&quot;angle&quot;,ref anglef,out cc);
+        		GetFloatArrayValue(&quot;score&quot;,ref scoref,out cc);
+        	
+        		Int16 as1 &#x3D; Convert.ToInt16((anglef[0]+CCD1sum)*100);
+        		Int16 as2 &#x3D; Convert.ToInt16((anglef[1]+CCD2sum)*100);
+        		angle1_int16 &#x3D; as1.ToString();
+        		angle2_int16 &#x3D; as2.ToString();
+        		string sst &#x3D; &quot;1&quot;;
+				outst &#x3D; sst;
+				angle1_int &#x3D; 1;
+				angle2_int &#x3D; 1;
+				angle1_float &#x3D; (-(anglef[0]+CCD1sum)).ToString();
+				angle2_float &#x3D; (-(anglef[1]+CCD2sum)).ToString();
+				score1_float &#x3D; scoref[0].ToString();
+				score2_float &#x3D; scoref[1].ToString();
+				&#x2F;&#x2F;outst_by &#x3D; Convert.ToByte(Convert.ToInt16(anglef[0]*100));	
+        	&#125;
+			else if(num &#x3D;&#x3D; 1)
+			&#123;
+				if(middlex&lt;imgwidth&#x2F;2)
+				&#123;
+        			Int16 as1 &#x3D; Convert.ToInt16((angle+CCD1sum)*100);
+        			Int16 as2 &#x3D; Convert.ToInt16(0);
+        			angle1_int16 &#x3D; as1.ToString();
+        			angle2_int16 &#x3D; as2.ToString();
+        			string sst &#x3D; &quot;4&quot;;
+					outst &#x3D; sst;
+					angle1_int &#x3D; 1;
+					angle2_int &#x3D; 0;
+					angle1_float &#x3D; (-(angle+CCD1sum)).ToString();
+					angle2_float &#x3D; &quot;-999&quot;;
+					score1_float &#x3D; score.ToString();
+					score2_float &#x3D;  &quot;-999&quot;;
+				&#125;
+			else
+			&#123;	
+        		Int16 as1 &#x3D; Convert.ToInt16(0);
+        		Int16 as2 &#x3D; Convert.ToInt16((angle+CCD2sum)*100);
+        		angle1_int16 &#x3D; as1.ToString();
+        		angle2_int16 &#x3D; as2.ToString();
+        		string sst &#x3D; &quot;3&quot;;
+				outst &#x3D; sst;
+				angle1_int &#x3D; 0;
+				angle2_int &#x3D; 1;
+				angle1_float &#x3D; &quot;-999&quot;;
+				angle2_float &#x3D; (-(angle+CCD2sum)).ToString();
+				score1_float &#x3D;  &quot;-999&quot;;
+				score2_float &#x3D; score.ToString();
+			&#125;
+		&#125;
+			else
+			&#123;	
+        		Int16 as1 &#x3D; Convert.ToInt16(0);
+        		Int16 as2 &#x3D; Convert.ToInt16(0);
+        		angle1_int16 &#x3D; as1.ToString();
+        		angle2_int16 &#x3D; as2.ToString();
+        		string sst &#x3D; &quot;2&quot;;
+				outst &#x3D; sst;
+				angle1_int &#x3D; 0;
+				angle2_int &#x3D; 0;	
+				angle1_float &#x3D; &quot;999&quot;;
+				angle2_float &#x3D; &quot;999&quot;;
+				score1_float &#x3D;  &quot;999&quot;;
+				score2_float &#x3D;  &quot;999&quot;;
+			&#125;
+		&#125;
+		#region 灰度
+            w
+        #endregion
+
+
+		&#x2F;&#x2F;灰度
+		if(st_model &#x3D;&#x3D; 1)&#123;
+			&#x2F;&#x2F;ShowMessageBox(&quot;灰度匹配执行&quot;);
+			if(g_Num &#x3D;&#x3D; 2)&#123;
+				
+        		GetFloatArrayValue(&quot;g_Angle&quot;,ref anglef,out cc);
+        		GetFloatArrayValue(&quot;g_Score&quot;,ref scoref,out cc);
+        	
+        		Int16 as1 &#x3D; Convert.ToInt16((anglef[0]+CCD1sum)*100);
+        		Int16 as2 &#x3D; Convert.ToInt16((anglef[1]+CCD2sum)*100);
+        		angle1_int16 &#x3D; as1.ToString();
+        		angle2_int16 &#x3D; as2.ToString();
+        		string sst &#x3D; &quot;1&quot;;
+				outst &#x3D; sst;
+				angle1_int &#x3D; 1;
+				angle2_int &#x3D; 1;
+				angle1_float &#x3D; (-(anglef[0]+CCD1sum)).ToString();
+				angle2_float &#x3D; (-(anglef[1]+CCD2sum)).ToString();
+				score1_float &#x3D; scoref[0].ToString();
+				score2_float &#x3D; scoref[1].ToString();
+				&#x2F;&#x2F;outst_by &#x3D; Convert.ToByte(Convert.ToInt16(anglef[0]*100));	
+        	&#125;
+			else if(g_Num &#x3D;&#x3D; 1)
+			&#123;
+				if(middlex&lt;imgwidth&#x2F;2)
+				&#123;
+        			Int16 as1 &#x3D; Convert.ToInt16((g_Angle+CCD1sum)*100);
+        			Int16 as2 &#x3D; Convert.ToInt16(0);
+        			angle1_int16 &#x3D; as1.ToString();
+        			angle2_int16 &#x3D; as2.ToString();
+        			string sst &#x3D; &quot;4&quot;;
+					outst &#x3D; sst;
+					angle1_int &#x3D; 1;
+					angle2_int &#x3D; 0;
+					angle1_float &#x3D; (-(g_Angle+CCD1sum)).ToString();
+					angle2_float &#x3D; &quot;-999&quot;;
+					score1_float &#x3D; g_Score.ToString();
+					score2_float &#x3D;  &quot;-999&quot;;
+				&#125;
+				else
+				&#123;	
+        			Int16 as1 &#x3D; Convert.ToInt16(0);
+        			Int16 as2 &#x3D; Convert.ToInt16((g_Angle+CCD2sum)*100);
+        			angle1_int16 &#x3D; as1.ToString();
+        			angle2_int16 &#x3D; as2.ToString();
+        			string sst &#x3D; &quot;3&quot;;
+					outst &#x3D; sst;
+					angle1_int &#x3D; 0;
+					angle2_int &#x3D; 1;
+					angle1_float &#x3D; &quot;-999&quot;;
+					angle2_float &#x3D; (-(g_Angle+CCD2sum)).ToString();
+					score1_float &#x3D;  &quot;-999&quot;;
+					score2_float &#x3D; g_Score.ToString();
+				&#125;
+			&#125;
+			else
+			&#123;	
+        		Int16 as1 &#x3D; Convert.ToInt16(0);
+        		Int16 as2 &#x3D; Convert.ToInt16(0);
+        		angle1_int16 &#x3D; as1.ToString();
+        		angle2_int16 &#x3D; as2.ToString();
+        		string sst &#x3D; &quot;2&quot;;
+				outst &#x3D; sst;
+				angle1_int &#x3D; 0;
+				angle2_int &#x3D; 0;	
+				angle1_float &#x3D; &quot;999&quot;;
+				angle2_float &#x3D; &quot;999&quot;;
+				score1_float &#x3D;  &quot;999&quot;;
+				score2_float &#x3D;  &quot;999&quot;;
+			&#125;
+		&#125;
+		&#x2F;&#x2F;高精度
+		if(st_model &#x3D;&#x3D; 2)&#123;
+			&#x2F;&#x2F;ShowMessageBox(&quot;高精度匹配执行&quot;);
+			if(h_Num &#x3D;&#x3D; 2)&#123;
+        		GetFloatArrayValue(&quot;h_Angle&quot;,ref anglef,out cc);
+        		GetFloatArrayValue(&quot;h_Score&quot;,ref scoref,out cc);
+        	
+        		Int16 as1 &#x3D; Convert.ToInt16((anglef[0]+CCD1sum)*100);
+        		Int16 as2 &#x3D; Convert.ToInt16((anglef[1]+CCD2sum)*100);
+        		angle1_int16 &#x3D; as1.ToString();
+        		angle2_int16 &#x3D; as2.ToString();
+        		string sst &#x3D; &quot;1&quot;;
+				outst &#x3D; sst;
+				angle1_int &#x3D; 1;
+				angle2_int &#x3D; 1;
+				angle1_float &#x3D; (-(anglef[0]+CCD1sum)).ToString();
+				angle2_float &#x3D; (-(anglef[1]+CCD2sum)).ToString();
+				score1_float &#x3D; scoref[0].ToString();
+				score2_float &#x3D; scoref[1].ToString();
+				&#x2F;&#x2F;outst_by &#x3D; Convert.ToByte(Convert.ToInt16(anglef[0]*100));	
+        	&#125;
+			else if(h_Num &#x3D;&#x3D; 1)
+			&#123;
+				if(middlex&lt;imgwidth&#x2F;2)
+				&#123;
+        			Int16 as1 &#x3D; Convert.ToInt16((h_Angle+CCD1sum)*100);
+        			Int16 as2 &#x3D; Convert.ToInt16(0);
+        			angle1_int16 &#x3D; as1.ToString();
+        			angle2_int16 &#x3D; as2.ToString();
+        			string sst &#x3D; &quot;4&quot;;
+					outst &#x3D; sst;
+					angle1_int &#x3D; 1;
+					angle2_int &#x3D; 0;
+					angle1_float &#x3D; (-(h_Angle+CCD1sum)).ToString();
+					angle2_float &#x3D; &quot;-999&quot;;
+					score1_float &#x3D; h_Score.ToString();
+					score2_float &#x3D;  &quot;-999&quot;;
+				&#125;
+			else
+			&#123;	
+        		Int16 as1 &#x3D; Convert.ToInt16(0);
+        		Int16 as2 &#x3D; Convert.ToInt16((h_Angle+CCD2sum)*100);
+        		angle1_int16 &#x3D; as1.ToString();
+        		angle2_int16 &#x3D; as2.ToString();
+        		string sst &#x3D; &quot;3&quot;;
+				outst &#x3D; sst;
+				angle1_int &#x3D; 0;
+				angle2_int &#x3D; 1;
+				angle1_float &#x3D; &quot;-999&quot;;
+				angle2_float &#x3D; (-(h_Angle+CCD2sum)).ToString();
+				score1_float &#x3D;  &quot;-999&quot;;
+				score2_float &#x3D; h_Score.ToString();
+			&#125;
+		&#125;
+			else
+			&#123;	
+        		Int16 as1 &#x3D; Convert.ToInt16(0);
+        		Int16 as2 &#x3D; Convert.ToInt16(0);
+        		angle1_int16 &#x3D; as1.ToString();
+        		angle2_int16 &#x3D; as2.ToString();
+        		string sst &#x3D; &quot;2&quot;;
+				outst &#x3D; sst;
+				angle1_int &#x3D; 0;
+				angle2_int &#x3D; 0;	
+				angle1_float &#x3D; &quot;999&quot;;
+				angle2_float &#x3D; &quot;999&quot;;
+				score1_float &#x3D;  &quot;999&quot;;
+				score2_float &#x3D;  &quot;999&quot;;
+			&#125;
+		&#125;
+        return true;
+    &#125;
+&#125;
+                            <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 
                 
             </div>
@@ -486,7 +682,7 @@ layout: &quot;friends&quot;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ViktorChen06.github.io/2023/04/30/Matery%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">http://ViktorChen06.github.io/2023/04/30/Matery%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</a>
+                    <a href="http://ViktorChen06.github.io/2023/08/12/vision-project-mcly/">http://ViktorChen06.github.io/2023/08/12/vision-project-mcly/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -524,12 +720,8 @@ layout: &quot;friends&quot;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hello-Hexo/">
-                                    <span class="chip bg-color">Hello Hexo</span>
-                                </a>
-                            
-                                <a href="/tags/Matery/">
-                                    <span class="chip bg-color">Matery</span>
+                                <a href="/tags/Vision-Master/">
+                                    <span class="chip bg-color">Vision Master</span>
                                 </a>
                             
                         </div>
@@ -792,9 +984,10 @@ layout: &quot;friends&quot;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/08/12/vision-project-mcly/">
                     <div class="card-image">
@@ -812,9 +1005,9 @@ layout: &quot;friends&quot;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -823,6 +1016,7 @@ layout: &quot;friends&quot;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -841,13 +1035,13 @@ layout: &quot;friends&quot;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/30/%E7%94%A8Waline-Vercel%E6%90%AD%E5%BB%BA%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/">
+                <a href="/2023/04/30/Matery%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="用Waline+Vercel搭建评论系统">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Hexo搭建(二)--Matery主题配置">
                         
-                        <span class="card-title">用Waline+Vercel搭建评论系统</span>
+                        <span class="card-title">Hexo搭建(二)--Matery主题配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -875,16 +1069,8 @@ layout: &quot;friends&quot;
                         <span class="chip bg-color">Hello Hexo</span>
                     </a>
                     
-                    <a href="/tags/Waline/">
-                        <span class="chip bg-color">Waline</span>
-                    </a>
-                    
-                    <a href="/tags/Vercel/">
-                        <span class="chip bg-color">Vercel</span>
-                    </a>
-                    
-                    <a href="/tags/NameSilo/">
-                        <span class="chip bg-color">NameSilo</span>
+                    <a href="/tags/Matery/">
+                        <span class="chip bg-color">Matery</span>
                     </a>
                     
                 </div>
