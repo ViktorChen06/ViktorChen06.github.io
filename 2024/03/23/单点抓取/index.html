@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo搭建(二)--Matery主题配置, 广的技术博客">
-    <meta name="description" content="前面为大家介绍了博客的基本框架搭建:【Hexo搭建(一)】
-下面让我们接着上一篇文章挖下的坑，把博客主题更换为Matery主题吧！
-Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方式以及内置多种优秀的交互功能，深受极">
+    <meta name="keywords" content="单点抓取--Vision Master, 广的技术博客">
+    <meta name="description" content="机器视觉中常常需要使用工业相机进行手眼标定，让机器获取视觉算法的能力；手眼标定是指通过校准机器人手部与其视觉系统之间的关系，以确保机器能够准确地定位和操作目标。在手眼标定过程中，机器人手部的位置和姿态会与相机拍摄到的物体特征进行对应，从而建">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo搭建(二)--Matery主题配置 | 广的技术博客</title>
+    <title>单点抓取--Vision Master | 广的技术博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -274,12 +272,12 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo搭建(二)--Matery主题配置</h1>
+                    <h1 class="description center-align post-title">单点抓取--Vision Master</h1>
                 </div>
             </div>
         </div>
@@ -303,12 +301,12 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hello-Hexo/">
-                                <span class="chip bg-color">Hello Hexo</span>
+                            <a href="/tags/Vision-Master/">
+                                <span class="chip bg-color">Vision Master</span>
                             </a>
                         
-                            <a href="/tags/Matery/">
-                                <span class="chip bg-color">Matery</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">
+                                <span class="chip bg-color">机器视觉</span>
                             </a>
                         
                     </div>
@@ -323,14 +321,14 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-30
+                    2024-03-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-30
+                    2024-03-23
                 </div>
                 
 
@@ -357,109 +355,40 @@ Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>前面为大家介绍了博客的基本框架搭建:<a href="https://viktorchen06.github.io/2023/04/27/Hexo%E6%90%AD%E5%BB%BA/">【Hexo搭建(一)】</a></p>
-<p>下面让我们接着上一篇文章挖下的坑，把博客主题更换为Matery主题吧！</p>
-<p>Matery主题是由blinkfox开源的一款响应式主题，其优秀的交互方式以及内置多种优秀的交互功能，深受极客的喜爱</p>
-<h3 id="Matery-主题下载"><a href="#Matery-主题下载" class="headerlink" title="Matery 主题下载"></a>Matery 主题下载</h3><p>打开你的博客文件夹，找到<code>themes</code>文件，打开<code>Git Bash</code>命令窗后输入 <del>（必须要把主题文件放在这个文件夹下喔）</del></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>你也可以直接网页下载然后在<code>themes</code>文件夹下解压，<a target="_blank" rel="noopener" href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">主题下载链接</a></p>
-<p>下载完成后在博客根目录的<code>_config.yml</code>文件中修改配置，把主题<code>theme</code>修改为<code>hexo-theme-matery</code>，应用主题</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># Extensions
-## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;
-## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;
-theme: hexo-theme-matery<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>并把全局中的相关信息更改</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># Site
-title: 博客名称
-subtitle: &#39;subtitle&#39;
-description: &#39;个性签名&#39;
-keywords:
-author: &#39;作者名字&#39;
-language: &#39;zh-CN&#39;
-timezone: &#39;Asia&#x2F;Shanghai&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># URL
-## Set your site url here. For example, if you use GitHub Page, set url as &#39;https:&#x2F;&#x2F;username.github.io&#x2F;project&#39;
-url: &#39;你的博客域名，例如我的是：http:&#x2F;&#x2F;ViktorChen06.github.io&#39;
-permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing &#39;index.html&#39; from permalinks
-  trailing_html: true # Set to false to remove trailing &#39;.html&#39; from permalinks<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>完成以上配置后记得保存</p>
-<h3 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h3><p>在<code>hexoblog</code>文件下<code>Git Bash</code>，新建以下页面</p>
+                <p>机器视觉中常常需要使用工业相机进行手眼标定，让机器获取视觉算法的能力；手眼标定是指通过校准机器人手部与其视觉系统之间的关系，以确保机器能够准确地定位和操作目标。在手眼标定过程中，机器人手部的位置和姿态会与相机拍摄到的物体特征进行对应，从而建立二者之间的准确关联关系。</p>
+<p>通过手眼标定，机器可以根据视觉系统提供的信息，精准地获取目标的位置和姿态，实现精准抓取、放置、定位等操作。手眼标定在工业自动化、机器人操作、计算机视觉等领域都有广泛的应用。</p>
+<p>手眼标定是一项重要的工作，可以确保机器人与视觉系统协同工作时的精准性和准确性。本片文章将会从基础的单相机标定抓取进行展开，聊聊在Vision Master中如何完成简单的手眼标定抓取项目。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>面对定位项目首先需要的，是对项目的精度做数据考量，机构的执行误差、对位的项目公差、视觉系统的视觉精度误差，都是我们在开展这项工作前应当首要考虑到的，对于定位项目来说项目的定位精度应当是由以下三个部分组合而成：</p>
 <ul>
-<li><p>标签页面</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;tags&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>生成后编辑新建的/source/tags/index.md文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: tags
-date: 2023-04-27 19:37:07
-type: &quot;tags&quot;
-layout: &quot;tags&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>下面的其它页面也是按照这个格式进行初始化配置，按照这个模板填入信息后保存即可</p>
-</li>
-<li><p>分类页面</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;categories&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: categories
-date: 2023-04-27 19:37:07
-type: &quot;categories&quot;
-layout: &quot;categories&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>关于页面</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;about&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: about
-date: 2023-04-27 19:37:07
-type: &quot;about&quot;
-layout: &quot;about&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>留言板</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;contact&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: contact
-date: 2023-04-27 19:37:07
-type: &quot;contact&quot;
-layout: &quot;contact&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>友情链接</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page &quot;friends&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: friends
-date: 2023-04-27 19:37:07
-type: &quot;friends&quot;
-layout: &quot;friends&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>定位精度 = 机构精度（1/3）+ 运动精度（1/3）+ 视觉精度（1/3）</li>
 </ul>
-<p>为了让友情页面有数据，配置完友情链接这个页面后，在博客根目录下的source文件夹新建 _data 目录，并在_data目录新建一个friends.json文件，把一些网页链接填写配置，来让这个页面有链接可以跳转，配置示例如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">[&#123;
-    &quot;avatar&quot;: &quot;http:&#x2F;&#x2F;image.luokangyuan.com&#x2F;4027734.jpeg&quot;,
-    &quot;name&quot;: &quot;BlinkFox&quot;,
-    &quot;introduction&quot;: &quot;blinkfox闪烁之狐的博客&quot;,
-    &quot;url&quot;: &quot;http:&#x2F;&#x2F;blinkfox.com&quot;,
-    &quot;title&quot;: &quot;前往学习&quot;
-   &#125;, &#123;
-    &quot;avatar&quot;: &quot;http:&#x2F;&#x2F;image.luokangyuan.com&#x2F;4027734.jpeg&quot;,
-    &quot;name&quot;: &quot;Viktor&quot;,
-    &quot;introduction&quot;: &quot;Viktor的博客&quot;,
-    &quot;url&quot;: &quot;https:&#x2F;&#x2F;viktorchen06.github.io&#x2F;&quot;,
-    &quot;title&quot;: &quot;前往学习&quot;
-   &#125;]   
-# 你可以拓展开来，但一定要按照以上的格式进行填写
-# avatar：图标
-# name:标签名字
-# introduction：链接简介
-# url: 链接
-# title：按键上的描述<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>完成所有配置后别忘记保存，接着在根目录下<code>Git Bash</code>，直接使用hexo三件套： <code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code>，然后在服务器中输入我们的本地主机，可以发现我们的主题已经更换啦</p>
-<p>接着我们回到主题的_config.yml文件进行配置</p>
-<p><strong>注意！！！是主题文件/themes/hexo-theme-matery路径下的_config.yml配置文件，而不是全局根目录下的那个配置文件喔</strong></p>
-<p>配置文件内有着读者大量的中文备注，你可以对着说明进行修改，并没有什么特别困难的，如果有需要的话后面再出一篇配置相关的帖子 <del>又给自己挖坑了（新建文件夹）</del></p>
-<p>Waline评论系统也已完成搭建，可在我的博客找到相关的文章：<a href="https://viktorchen06.github.io/2023/04/30/%E7%94%A8Waline-Vercel%E6%90%AD%E5%BB%BA%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/">【用Waline+Vercel搭建评论系统】</a></p>
+<p>对于视觉精度部分，定位项目中引起精度误差的因素有：标定误差、图像算法处理误差、坐标转换误差。为了达到视觉精度要求，常常要求视觉的单像素精度为视觉精度的1/3。</p>
+<ul>
+<li>例如：某个项目现阶段需要做到±0.12mm的精度，项目是否可行呢？</li>
+</ul>
+<p>那么首先我们得考虑，定位物品的刚性强度，如果是柔软的材料，那肯定是没办法做的，材料刚性越柔软，其定位精度越差（形变必然引起误差）。</p>
+<p>此次，我们要考虑材料的大小，视觉中一个重要的准则是：视野越大，精度越差，视野越小，精度越高，对于一款较大的产品，必然视野也得相对应做大，那么也在一定程度上拖垮了视觉的精度。</p>
+<p>如果材料和视野都不成大问题，那么此时视觉的精度就占据了整个项目精度的1/3，也就是0.04mm，再来还要考虑成像上，边缘位置还需要再考虑过渡带，此时单像素精度就得做到视觉精度的1/3，也就是0.04*（1/3）= 0.0133mm/pixel。</p>
+<p>只有完成以上的准备工作后，才能进行后续的算法应用工作。</p>
+<h3 id="标定工作"><a href="#标定工作" class="headerlink" title="标定工作"></a>标定工作</h3><p>标定目的：把图像坐标和现实的物理坐标统一起来，计算两套坐标的坐标映射关系，根据应用场景，可以将其分为末端执行器共轴与不共轴两种项目场景，那么在Vision Master（以下统一称作VM）中则可以对应使用平移标定以及平移旋转标定两条不同的路线。</p>
+<p><img src="https://img2.imgtp.com/2024/03/23/sESkz8JS.png"></p>
+<p>平移标定，一般使用9点标定，平移旋转标定，则是在此基础上引入N点的旋转坐标标定（通常为3点旋转标定）</p>
+<p><img src="https://img2.imgtp.com/2024/03/23/t7moEjFI.png"></p>
+<p><img src="https://img2.imgtp.com/2024/03/23/0t7kLXxZ.png"></p>
+<p>在VM中，使用平移旋转标定算法模块，通过记录相机与机械臂的9个坐标点，可以自动生成一份标定数据文件，后续的单点对位模块利用此坐标映射文件，就能够通过像素特征映射获取到现实物理坐标，从而实现手眼标定的功能。</p>
+<p><img src="https://img2.imgtp.com/2024/03/23/gsO8rR7D.png"></p>
+<p>平移像素平均误差和旋转像素平均误差：根据实际精度要求判断，一般建议在一个像素以内。<br>角度旋转一致性：表示图像坐标系与机械手坐标系的旋转一致性，1 表示旋转一致，-1 表示旋转方向相反，需旋转机构查看旋转一致性是否判断准确。</p>
+<h3 id="示教工作"><a href="#示教工作" class="headerlink" title="示教工作"></a>示教工作</h3><p>示教目的：通过示教建立目标检测物的基准像素坐标和物理坐标之间的关系；引导机械手以基准姿态抓住物料，并记录此时机械手坐标，然后回拍照位记录此时的图像特征点；实际生产时以此时图像特征点作为基准，将生产时图像特征点和基准图像特征点转到物理坐标系计算偏差。</p>
+<p><img src="https://img2.imgtp.com/2024/03/23/mVkrdWJD.png"></p>
+<h3 id="项目测试"><a href="#项目测试" class="headerlink" title="项目测试"></a>项目测试</h3><p>完成前面的标定以及示教工作，即可做最后的测试。</p>
+<p>生产拍照位坐标为示教拍照位坐标，可产生 X/Y 偏移(最终偏差需在单点抓取偏差的基础上加上拍照位变化量)，但拍照姿态（相机旋转角度）必须保持不变；生产拍照位与标定时的工作距离必须保持不变。</p>
+<p><img src="https://img2.imgtp.com/2024/03/23/CSVE50Xj.png"></p>
+<p>在单点抓取模块中输入图像的特征点数据信息，以及机构的物理坐标，拍照时（第五点）的物理坐标，加载标定文件，完成单点抓取模块的配置工作。</p>
+<p>模块结果分为相对坐标及绝对坐标，绝对坐标则为机构抓取的位置。使用格式化模块订阅单点抓取模块输出的偏差值/绝对坐标，然后使用发送数据模块将结果发送给机械手，机械手按照绝对坐标可实现引导定位。</p>
+<p><img src="https://img2.imgtp.com/2024/03/23/Gesuwml3.png"></p>
+<ul>
+<li>详细教学：<a target="_blank" rel="noopener" href="https://www.v-club.com/vCollage/vCollageDetail/219">https://www.v-club.com/vCollage/vCollageDetail/219</a></li>
+</ul>
 
                 
             </div>
@@ -486,7 +415,7 @@ layout: &quot;friends&quot;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ViktorChen06.github.io/2023/04/30/Matery%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">http://ViktorChen06.github.io/2023/04/30/Matery%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</a>
+                    <a href="http://ViktorChen06.github.io/2024/03/23/%E5%8D%95%E7%82%B9%E6%8A%93%E5%8F%96/">http://ViktorChen06.github.io/2024/03/23/%E5%8D%95%E7%82%B9%E6%8A%93%E5%8F%96/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -524,12 +453,12 @@ layout: &quot;friends&quot;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hello-Hexo/">
-                                    <span class="chip bg-color">Hello Hexo</span>
+                                <a href="/tags/Vision-Master/">
+                                    <span class="chip bg-color">Vision Master</span>
                                 </a>
                             
-                                <a href="/tags/Matery/">
-                                    <span class="chip bg-color">Matery</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">
+                                    <span class="chip bg-color">机器视觉</span>
                                 </a>
                             
                         </div>
@@ -792,9 +721,10 @@ layout: &quot;friends&quot;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2024/03/23/%E5%8D%95%E7%82%B9%E6%8A%93%E5%8F%96/">
                     <div class="card-image">
@@ -812,9 +742,9 @@ layout: &quot;friends&quot;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -823,6 +753,7 @@ layout: &quot;friends&quot;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -845,13 +776,13 @@ layout: &quot;friends&quot;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/30/%E7%94%A8Waline-Vercel%E6%90%AD%E5%BB%BA%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/">
+                <a href="/2023/04/30/Matery%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="用Waline+Vercel搭建评论系统">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Hexo搭建(二)--Matery主题配置">
                         
-                        <span class="card-title">用Waline+Vercel搭建评论系统</span>
+                        <span class="card-title">Hexo搭建(二)--Matery主题配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -879,16 +810,8 @@ layout: &quot;friends&quot;
                         <span class="chip bg-color">Hello Hexo</span>
                     </a>
                     
-                    <a href="/tags/Waline/">
-                        <span class="chip bg-color">Waline</span>
-                    </a>
-                    
-                    <a href="/tags/Vercel/">
-                        <span class="chip bg-color">Vercel</span>
-                    </a>
-                    
-                    <a href="/tags/NameSilo/">
-                        <span class="chip bg-color">NameSilo</span>
+                    <a href="/tags/Matery/">
+                        <span class="chip bg-color">Matery</span>
                     </a>
                     
                 </div>
