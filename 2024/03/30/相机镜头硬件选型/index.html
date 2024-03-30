@@ -4,10 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo搭建(一), 广的技术博客">
-    <meta name="description" content="我的个人技术博客终于搭建好啦！！！没想到搭建一个blog只需要Ctrl C + Ctrl V就能完成（高级CV工程师了属于是）
-废话不多说，来简单介绍一下博客的搭建过程以及遇到的一些坑
-本网站使用Hexo框架进行搭建，Hexo是一款高效简洁">
+    <meta name="keywords" content="相机镜头硬件选型--机器视觉, 广的技术博客">
+    <meta name="description" content="镜头成像原理先来看一下透镜成像原理：
+
+根据这个关系。可以确认物距 u = 焦距f * (1/放大系数  + 1）
+机器视觉硬件选型，要根据精度、视野范围、物距范围，来确认相机，镜头的选型。
+相机选型
+案例: 精度要求0.01，视野范围 1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo搭建(一) | 广的技术博客</title>
+    <title>相机镜头硬件选型--机器视觉 | 广的技术博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -287,12 +290,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo搭建(一)</h1>
+                    <h1 class="description center-align post-title">相机镜头硬件选型--机器视觉</h1>
                 </div>
             </div>
         </div>
@@ -316,8 +319,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hello-Hexo/">
-                                <span class="chip bg-color">Hello Hexo</span>
+                            <a href="/tags/%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">硬件知识</span>
                             </a>
                         
                     </div>
@@ -332,14 +335,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-27
+                    2024-03-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-30
+                    2024-03-30
                 </div>
                 
 
@@ -366,56 +369,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>我的个人技术博客终于搭建好啦！！！<del>没想到搭建一个blog只需要Ctrl C + Ctrl V就能完成（高级CV工程师了属于是）</del></p>
-<p>废话不多说，来简单介绍一下博客的搭建过程以及遇到的一些坑</p>
-<p>本网站使用<code>Hexo</code>框架进行搭建，<code>Hexo</code>是一款高效简洁的博客框架，通过配置文件的修改以及第三方插件的安装可在短时间内搭建出属于自己的博客网站</p>
-<p><code>Hexo</code>框架可将<code>MarkDown</code>格式的文件进行解析渲染，从而完成文章的输出</p>
-<p>在准备搭建自己的<code>blog</code>之前，希望你的开发环境做好一下准备：</p>
-<ul>
-<li>前往 <del>全球最大的同性交友网站（bushi）</del> GitHub注册一个自己的账号，后期生成的静态<code>blog</code>将托管在你的<code>GitHub</code>仓库中</li>
-<li>下载<code>Visual Studio Code</code> 和 <code>Git</code>版本管理器，框架安装完成后很多配置文件需要在编译器中完成修改，<code>vscode</code>是个人用的比较舒服的一款编译器，后期的<code>MarkDown</code>文章通过<code>vscode</code>编纂也会相对简单便捷一些；<code>Git</code>就不多说啦，很好用的版本管理器，后期文章写完也需要通过版本管理器上传至自己的仓库，必不可少</li>
-<li>下载<code>Node.js</code>并配置环境，由于篇幅有限，这里奉上安装教程链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/WHF__/article/details/129362462">https://blog.csdn.net/WHF__/article/details/129362462</a></li>
+                <h3 id="镜头成像原理"><a href="#镜头成像原理" class="headerlink" title="镜头成像原理"></a>镜头成像原理</h3><p>先来看一下透镜成像原理：</p>
+<p><img src="https://xian-vforum.oss-cn-hangzhou.aliyuncs.com/2022-08-22_CAKRHnp84n_image.png"></p>
+<p>根据这个关系。可以确认物距 u = 焦距f * (1/放大系数  + 1）</p>
+<p>机器视觉硬件选型，要根据精度、视野范围、物距范围，来确认相机，镜头的选型。</p>
+<h3 id="相机选型"><a href="#相机选型" class="headerlink" title="相机选型"></a>相机选型</h3><ul>
+<li>案例: 精度要求0.01，视野范围 10*10mm, 物距150±50，快门无要求</li>
 </ul>
-<h3 id="Git-账户配置"><a href="#Git-账户配置" class="headerlink" title="Git 账户配置"></a>Git 账户配置</h3><p>安装完<code>Git</code>后并不能直接使用，需要先将自己的<code>GitHub</code>账号配置进来,在一个新的文件下右键<code>Git Bash</code>,弹出指令窗口后输入以下指令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ git config --global user.name &quot;自己的GitHub用户名&quot;
-$ git config --global user.email &quot;自己的GitHub注册邮箱&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>生成自己的<code>SSH</code>密钥</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>此时在<code>C:\Users\xxxx\.ssh</code>文件路径中将<code>id_rsa.pub</code>密钥通过文本打开，复制下自己的公共密钥，在<code>GitHub</code>的<code>头像--&gt;Settings--&gt;SSH and GPG keys</code>中添加上公共密钥<code>SSH Keys</code></p>
-<p><img src="https://pic1.zhimg.com/80/v2-72a3f22c080e99343c3cc4aabce10e3c_720w.webp"></p>
-<p>回到<code>Git</code>,输入命令</p>
-<pre class="line-numbers language-none"><code class="language-none">$ ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果返回为：<code>Hi 用户名！ You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
-<p>则说明配置已成功，如果不是该返回值，请检查自己的网络状况多试几次，毕竟这个网站….你懂的</p>
-<h3 id="Node-js-安装检查"><a href="#Node-js-安装检查" class="headerlink" title="Node.js 安装检查"></a>Node.js 安装检查</h3><p>在正式开始<code>Hexo</code>框架安装前，在<code>cmd</code>中输入</p>
-<pre class="line-numbers language-none"><code class="language-none">$ node -v
-$ npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>查看是否有<code>node</code>和<code>npm</code>版本号返回，如果没有，请检查电脑的环境变量是否配置添加了<code>node</code>相关的环境变量</p>
-<h3 id="Hexo-框架安装"><a href="#Hexo-框架安装" class="headerlink" title="Hexo 框架安装"></a>Hexo 框架安装</h3><p>千呼万唤，终于到我们的主角登场了，在准备好前面的步骤后，首先新建一个文件夹用来保存我们的静态<code>Blog</code>工程，尽量不要以中文的形式命名，后续的所有工程以及文章都会保存在这个工程文件夹中</p>
-<p>进入文件夹，右键<code>Git Bash</code>,使用开始安装<code>Hexo</code></p>
-<pre class="line-numbers language-none"><code class="language-none">$ curl -O https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;kjhuanhao&#x2F;hexo-script@master&#x2F;install.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://3344701850-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LlpfTEtpw-XHjloYx-t%2F-Llujyttm0BWO_RMRg-2%2F-LlukgEwkesx8NRKmBdo%2F2.png?alt=media&token=ec7c6fd6-108a-4161-a3d5-1a67438fa83d"></p>
-<p>此时文件下会生成一个下载文件<code>install.sh</code></p>
-<p>继续，在当前路径下输入指令</p>
-<pre class="line-numbers language-none"><code class="language-none">$ source install.sh test_node<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://3344701850-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LlpfTEtpw-XHjloYx-t%2F-Llul9Kdh1NJmVlnXuGd%2F-Llum1fgCUk0Unm0jlVo%2F3.png?alt=media&token=6a788601-ff5f-4f61-8862-7b179074e1c2"><br>(出现了版本号和成功的提示信息代表<code>node</code>配置成功)</p>
-<p>输入指令开始安装<code>windows</code>环境下的<code>hexo</code>框架</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ source install.sh hexo_win<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://3344701850-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LlpfTEtpw-XHjloYx-t%2F-LluplfJDETDQ1wIHNxR%2F-LlupnWqOZVWU6iL3uK9%2F5.png?alt=media&token=30690ad9-b4fb-4240-ad96-1ea7686d888c"></p>
-<p>出现这个时，我们的任务就已经完成一半啦！</p>
-<p>回到文件夹中，你会发现生成了一个叫<code>hexoblog</code>的文件夹，进入到该文件夹中，你可以使用<code>cd hexoblog</code>指令进入或者关闭<code>Git</code>窗口手动进入<code>hexoblog</code>重新<code>Git Bash</code>打开</p>
-<p>来，现在试着在<code>Git</code>的命令窗口下输入</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="https://3344701850-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LlpfTEtpw-XHjloYx-t%2F-LluplfJDETDQ1wIHNxR%2F-LluqmWs7L0rHAJhJkR-%2F6.png?alt=media&token=88e71510-22da-4c59-bd41-1d7bb2909436"></p>
-<p>右键复制中间那串地址前往浏览器打开，<strong>千万不要用Ctrl+C复制！！！会把刚打开的本地服务器关掉的</strong></p>
-<p><img src="https://3344701850-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LlpfTEtpw-XHjloYx-t%2F-LluplfJDETDQ1wIHNxR%2F-LlurN1aku8F_ZGR35Av%2F7.png?alt=media&token=c9b96207-b162-43de-839b-1837d1241566"></p>
-<p>可喜可贺，你已经成功通过Hexo框架搭建出<code>blog</code>的雏形啦，后面我们会使用<code>Matery</code>主题更换掉这个单调简单空 liao liao 的界面，敬请关注。<del>（新建文件夹）</del></p>
+<p>一般的，对硬件的选型都取1/3作为理论安全系数进行选型，但是需要考虑部分客观性因素，那么最好使用1/5进行保险的安全系数。</p>
+<p>这里我们按照1/3理论值来计算单像素精度：0.01 / 3 mm=3.333μ 。</p>
+<p>相机分辨率：视野/单像素精度  = 3000*3000（10mm=10000um  10000/3.333≈3000）</p>
+<p>因此找到分辨率比较接近的一款即可</p>
+<p><img src="https://img2.imgtp.com/2024/03/30/Gz9blOT8.png"></p>
+<h3 id="镜头选型"><a href="#镜头选型" class="headerlink" title="镜头选型"></a>镜头选型</h3><p>放大系数i = 像元尺寸/单像素精度 = 1.85/3.333= 0.56（得出镜头的放大倍率要到0.56）</p>
+<p>根据：物距 u = 焦距f * ( 1 / 放大系数  + 1）</p>
+<p>推导： 焦距f = 物距 u / ( 1 / 放大系数  + 1） = 150 /（1 / 0.56 +1）= 53.8</p>
+<p>最接近53.8 的，是50mm镜头。</p>
+<p>实际物距：物距 u = 焦距f * ( 1 / 放大系数  + 1）= 50 *（1 / 0.56 +1）= 139mm</p>
+<p>实际相距v = 放大系数 * 物距 u  = 0.56 * 139 = 77.84 ≈ 78</p>
+<p>根据相机芯片靶面 &lt; 镜头像面尺寸（也可理解位镜头靶面），则镜头像面尺寸参数要大于1/1.7’’</p>
+<p>至此，我们获得了镜头的焦距、像面尺寸的参数，可以确定的是，我们需要使用50mm焦距的镜头，并且靶面要大于1/1.7’’；</p>
+<p>然后，我们可以根据镜头硬件的MTF参数表，计算有效分辨率，例如：MVL-MF5028M-8MP这款镜头，MTF图显示大于0.3 线对大于160 ，有效分辨率500/160 = 3.125μ。</p>
+<p><img src="https://xian-vforum.oss-cn-hangzhou.aliyuncs.com/2022-08-22_Uz4jCQJTTy_image.png"></p>
+<p>MTF曲线图，不同颜色代表中心及周边不同的视场（或称像圈大小），每种颜色会有两条曲线，分别代表子午像（T）和弧矢像（S）。不难看出，MTF曲线与横、纵坐标围成的面积越大，代表镜头成像性能越好；不同颜色曲线越接近，代表视场中心和周边成像一致性越好；S与T越接近，代表不同方向的成像越一致。</p>
+<p>关于镜头的解析力，也就是镜头型号后的xMP参数，一般默认选择相机分辨率的1/2，即：这里相机我们选择CU120这款，分辨率是1200w的，那么选型时选择600W以上的镜头就好（600w是镜头最小分辨率）。</p>
+<p>同时也可参照MTF图进行精度计算，计算在0.3时以上时，其有效分辨率是否达到单像素精度的要求；</p>
+<h3 id="硬件参数含义"><a href="#硬件参数含义" class="headerlink" title="硬件参数含义"></a>硬件参数含义</h3><ul>
+<li>相机参数</li>
+</ul>
+<p>靶面尺寸：就是芯片尺寸，就是分辨率*像元尺寸。 同样的分辨率，像元尺寸越大，成像质量越好。价格越贵。</p>
+<p>帧率：主要与分辨率 和 通讯接口相关， 同样的通讯接口， 分辨率越高，帧率越低。 提高帧率，要么降低分辨率，要么更换更快的通讯接口；同样的分辨率，U口的最大工作帧率要大于网口相机的。</p>
+<p>镜头接口：最常用的的C接口，选镜头的时候，接口一定要对上。</p>
+<p>快门方式：全局，卷帘。 全局支持飞拍。全局比卷帘贵。</p>
+<p>靶面尺寸：就是芯片尺寸，就是分辨率*像元尺寸。 同样的分辨率，像元尺寸越大，成像质量越好。价格越贵。例如：CU120这款，分辨率是4024 × 3036，像元尺寸1.85 μm × 1.85 μm，则芯片尺寸 = （4024 * 1.85）  * （3026 * 1.85 ） = 7.4 *  5.6 mm</p>
+<ul>
+<li>镜头参数</li>
+</ul>
+<p>靶面尺寸：镜头靶面尺寸一定要大于相机的芯片靶面尺寸。</p>
+<p>焦距：影响物距。同样视野下，并聚焦，焦距越大，物距越远；焦距和物距成正比关系 </p>
+<p>焦距f ＝ WD（物距） × 相机芯片尺寸( h or v) / FOV视场( H or V)</p>
+<p>光圈：光圈越大，支持越短的曝光时间。 光圈越小，景深越大。 镜头最佳成像质量光圈，一般在最大光圈，回缩一点的位置。比如F2.4光圈镜头，最佳成像质量就是2.2-2 的位置。（主观看法，没有试验依据）</p>
+<p>镜头接口：要与相机接口一致，常用C口接口。</p>
+<p>线对：0.3以上的线对才有意义。 比如200线对，就是 1mm范围内，有200对黑白相间的线条。  白色线条成像灰度是 GW， 黑色线条成像灰度是GB（参考MTF曲线图）</p>
+<p>计算：r = GW-GB/GW+GB </p>
+<p>r&gt;0.3以上    </p>
+<p>比如： GW = 170， GB= 80   </p>
+<p> r = 170-80/170+80 = 0.36  </p>
+<h3 id="海康视觉硬件选型"><a href="#海康视觉硬件选型" class="headerlink" title="海康视觉硬件选型"></a>海康视觉硬件选型</h3><p>可以前往海康机器人官网 进行硬件选型，根据指示和参数进行填写，即可获取符合需求的镜头型号</p>
+<p><a target="_blank" rel="noopener" href="https://www.hikrobotics.com/cn/machinevision/visionproduct?typeId=40&amp;id=247">https://www.hikrobotics.com/cn/machinevision/visionproduct?typeId=40&amp;id=247</a></p>
+<p><img src="https://img2.imgtp.com/2024/03/30/oOaTnbO4.png"></p>
 
                 
             </div>
@@ -442,7 +444,7 @@ $ npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ViktorChen06.github.io/2023/04/27/Hexo%E6%90%AD%E5%BB%BA/">http://ViktorChen06.github.io/2023/04/27/Hexo%E6%90%AD%E5%BB%BA/</a>
+                    <a href="http://ViktorChen06.github.io/2024/03/30/%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B/">http://ViktorChen06.github.io/2024/03/30/%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -480,8 +482,8 @@ $ npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hello-Hexo/">
-                                    <span class="chip bg-color">Hello Hexo</span>
+                                <a href="/tags/%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">硬件知识</span>
                                 </a>
                             
                         </div>
@@ -744,62 +746,18 @@ $ npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/04/28/C-NET-%E6%B3%9B%E5%9E%8B/">
+                <a href="/2024/03/30/%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="C#/.NET-泛型">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="相机镜头硬件选型--机器视觉">
                         
-                        <span class="card-title">C#/.NET-泛型</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-28
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Viktor Chen
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/C-NET/">
-                        <span class="chip bg-color">C#/.NET</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/04/27/Hexo%E6%90%AD%E5%BB%BA/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Hexo搭建(一)">
-                        
-                        <span class="card-title">Hexo搭建(一)</span>
+                        <span class="card-title">相机镜头硬件选型--机器视觉</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -810,7 +768,7 @@ $ npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-30
                             </span>
                         <span class="publish-author">
                             
@@ -824,8 +782,57 @@ $ npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hello-Hexo/">
-                        <span class="chip bg-color">Hello Hexo</span>
+                    <a href="/tags/%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">硬件知识</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/03/23/pdf/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="VM文档--Vision Master">
+                        
+                        <span class="card-title">VM文档--Vision Master</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Viktor Chen
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vision-Master/">
+                        <span class="chip bg-color">Vision Master</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/">
+                        <span class="chip bg-color">技术手册</span>
                     </a>
                     
                 </div>
