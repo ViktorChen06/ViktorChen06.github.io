@@ -4,13 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="相机镜头硬件选型--机器视觉, 广的技术博客">
-    <meta name="description" content="镜头成像原理先来看一下透镜成像原理：
-
-根据这个关系。可以确认物距 u = 焦距f * (1/放大系数  + 1）
-机器视觉硬件选型，要根据精度、视野范围、物距范围，来确认相机，镜头的选型。
-相机选型
-案例: 精度要求0.01，视野范围 1">
+    <meta name="keywords" content="标定知识--Vision Master, 广的技术博客">
+    <meta name="description" content="上下相机对位贴合标定项目常用下相机进行标定，然后用‘映射标定’模块，配合海康Ⅱ型标定板进行上下相机标定映射
+下相机标定工作使用通讯的方式，接收上位机的XYR坐标参数，然后使用‘平移旋转标定’模块（固定都使用该模块，其它模块算法功能可能存在有">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>相机镜头硬件选型--机器视觉 | 广的技术博客</title>
+    <title>标定知识--Vision Master | 广的技术博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -277,7 +273,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'd11c77d95fb8f239190ed515e5e29b7b21df7f59ed8ffe8a94681556d135b3fd';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('本篇文章为私密文章，请联系博主获取密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -290,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">相机镜头硬件选型--机器视觉</h1>
+                    <h1 class="description center-align post-title">标定知识--Vision Master</h1>
                 </div>
             </div>
         </div>
@@ -319,8 +315,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86/">
-                                <span class="chip bg-color">硬件知识</span>
+                            <a href="/tags/Vision-Master/">
+                                <span class="chip bg-color">Vision Master</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">
+                                <span class="chip bg-color">机器视觉</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%A0%87%E5%AE%9A/">
+                                <span class="chip bg-color">标定</span>
                             </a>
                         
                     </div>
@@ -335,14 +339,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-03-30
+                    2024-04-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-30
+                    2024-04-09
                 </div>
                 
 
@@ -369,55 +373,28 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="镜头成像原理"><a href="#镜头成像原理" class="headerlink" title="镜头成像原理"></a>镜头成像原理</h3><p>先来看一下透镜成像原理：</p>
-<p><img src="https://xian-vforum.oss-cn-hangzhou.aliyuncs.com/2022-08-22_CAKRHnp84n_image.png"></p>
-<p>根据这个关系。可以确认物距 u = 焦距f * (1/放大系数  + 1）</p>
-<p>机器视觉硬件选型，要根据精度、视野范围、物距范围，来确认相机，镜头的选型。</p>
-<h3 id="相机选型"><a href="#相机选型" class="headerlink" title="相机选型"></a>相机选型</h3><ul>
-<li>案例: 精度要求0.01，视野范围 10*10mm, 物距150±50，快门无要求</li>
-</ul>
-<p>一般的，对硬件的选型都取1/3作为理论安全系数进行选型，但是需要考虑部分客观性因素，那么最好使用1/5进行保险的安全系数。</p>
-<p>这里我们按照1/3理论值来计算单像素精度：0.01 / 3 mm=3.333μ 。</p>
-<p>相机分辨率：视野/单像素精度  = 3000*3000（10mm=10000um  10000/3.333≈3000）</p>
-<p>因此找到分辨率比较接近的一款即可</p>
-<p><img src="https://img2.imgtp.com/2024/03/30/Gz9blOT8.png"></p>
-<h3 id="镜头选型"><a href="#镜头选型" class="headerlink" title="镜头选型"></a>镜头选型</h3><p>放大系数i = 像元尺寸/单像素精度 = 1.85/3.333= 0.56（得出镜头的放大倍率要到0.56）</p>
-<p>根据：物距 u = 焦距f * ( 1 / 放大系数  + 1）</p>
-<p>推导： 焦距f = 物距 u / ( 1 / 放大系数  + 1） = 150 /（1 / 0.56 +1）= 53.8</p>
-<p>最接近53.8 的，是50mm镜头。</p>
-<p>实际物距：物距 u = 焦距f * ( 1 / 放大系数  + 1）= 50 *（1 / 0.56 +1）= 139mm</p>
-<p>实际相距v = 放大系数 * 物距 u  = 0.56 * 139 = 77.84 ≈ 78</p>
-<p>根据相机芯片靶面 &lt; 镜头像面尺寸（也可理解位镜头靶面），则镜头像面尺寸参数要大于1/1.7’’</p>
-<p>至此，我们获得了镜头的焦距、像面尺寸的参数，可以确定的是，我们需要使用50mm焦距的镜头，并且靶面要大于1/1.7’’；</p>
-<p>然后，我们可以根据镜头硬件的MTF参数表，计算有效分辨率，例如：MVL-MF5028M-8MP这款镜头，MTF图显示大于0.3 线对大于160 ，有效分辨率500/160 = 3.125μ。</p>
-<p><img src="https://xian-vforum.oss-cn-hangzhou.aliyuncs.com/2022-08-22_Uz4jCQJTTy_image.png"></p>
-<p>MTF曲线图，不同颜色代表中心及周边不同的视场（或称像圈大小），每种颜色会有两条曲线，分别代表子午像（T）和弧矢像（S）。不难看出，MTF曲线与横、纵坐标围成的面积越大，代表镜头成像性能越好；不同颜色曲线越接近，代表视场中心和周边成像一致性越好；S与T越接近，代表不同方向的成像越一致。</p>
-<p>关于镜头的解析力，也就是镜头型号后的xMP参数，一般默认选择相机分辨率的1/2，即：这里相机我们选择CU120这款，分辨率是1200w的，那么选型时选择600W以上的镜头就好（600w是镜头最小分辨率）。</p>
-<p>同时也可参照MTF图进行精度计算，计算在0.3时以上时，其有效分辨率是否达到单像素精度的要求；</p>
-<h3 id="硬件参数含义"><a href="#硬件参数含义" class="headerlink" title="硬件参数含义"></a>硬件参数含义</h3><ul>
-<li>相机参数</li>
-</ul>
-<p>靶面尺寸：就是芯片尺寸，就是分辨率*像元尺寸。 同样的分辨率，像元尺寸越大，成像质量越好。价格越贵。</p>
-<p>帧率：主要与分辨率 和 通讯接口相关， 同样的通讯接口， 分辨率越高，帧率越低。 提高帧率，要么降低分辨率，要么更换更快的通讯接口；同样的分辨率，U口的最大工作帧率要大于网口相机的。</p>
-<p>镜头接口：最常用的的C接口，选镜头的时候，接口一定要对上。</p>
-<p>快门方式：全局，卷帘。 全局支持飞拍。全局比卷帘贵。</p>
-<p>靶面尺寸：就是芯片尺寸，就是分辨率*像元尺寸。 同样的分辨率，像元尺寸越大，成像质量越好。价格越贵。例如：CU120这款，分辨率是4024 × 3036，像元尺寸1.85 μm × 1.85 μm，则芯片尺寸 = （4024 * 1.85）  * （3026 * 1.85 ） = 7.4 *  5.6 mm</p>
+                <h3 id="上下相机对位贴合标定项目"><a href="#上下相机对位贴合标定项目" class="headerlink" title="上下相机对位贴合标定项目"></a>上下相机对位贴合标定项目</h3><p>常用下相机进行标定，然后用‘映射标定’模块，配合海康Ⅱ型标定板进行上下相机标定映射</p>
+<h3 id="下相机标定工作"><a href="#下相机标定工作" class="headerlink" title="下相机标定工作"></a>下相机标定工作</h3><p>使用通讯的方式，接收上位机的XYR坐标参数，然后使用‘平移旋转标定’模块（固定都使用该模块，其它模块算法功能可能存在有问题）</p>
+<p>标定类型：平移旋转标定（9点平移 + N点旋转）</p>
+<p>自由度：选择‘缩放、旋转、纵横比、倾斜及平移’（固定）</p>
+<p>坐标输入：图像坐标选择模板匹配或较为明显的特征点坐标，物理坐标填入上位机通讯发送过来的物理坐标数据</p>
+<p>图像角度、物理角度：前者填入图像某个边或者比较好抓的特征边沿（能够很好地表达出物料旋转角度的地方），物理角度填入上位机发送过来的角度数据</p>
+<p>标定文件选择‘更新文件’、标定文件路径</p>
+<p>点击‘清空标定点’（注意清空后不要点击模块的执行，点击后会生成一个点的坐标信息）</p>
+<h3 id="上相机映射"><a href="#上相机映射" class="headerlink" title="上相机映射"></a>上相机映射</h3><p>使用海康Ⅱ型标定板，放在上相机位放料位取图一张，然后吸取标定板到下相机位进行拍照取图，使用这两张图片进行标定映射（使用‘映射标定’模块，加载下相机标定文件，以及上下相机的两张图片，自动完成坐标信息的映射）</p>
+<p>需要注意的是，‘映射标定’模块的图像顺序需要留意，上相机在前，下相机在后</p>
+<p>并且需要将更新文件使能打开</p>
+<h3 id="上相机生产流程"><a href="#上相机生产流程" class="headerlink" title="上相机生产流程"></a>上相机生产流程</h3><p>上相机做初步抓取，抓取到产品特征后，将特征点位的XY以及角度输入给到‘单点映射对位’</p>
+<h5 id="单点映射对位需要注意的点"><a href="#单点映射对位需要注意的点" class="headerlink" title="单点映射对位需要注意的点"></a>单点映射对位需要注意的点</h5><p>模块中，对象像素点，指的是下相机位拍照的第五点坐标（0，0，0）对应的图片像素参数，比如在下相机拍照第五点特征点的像素坐标参数，应当进行记录</p>
+<p>目标像素点：为上相机生产时，某个特征的坐标点的数据，一般做点点测量，以直线的中心点作为目标像素点</p>
+<p>目标像素直线起点、终点：点点测量，两个点的坐标（需要注意的是，要和下相机位的点点测量一一对应，如起点为大圆的圆心，终点为小圆的圆心，都需要一一对应上）</p>
+<p>示教物理点：下相机拍照第五点的物理坐标</p>
+<p>最后加载N点标定文件、映射标定文件即可</p>
+<h3 id="下相机生成流程"><a href="#下相机生成流程" class="headerlink" title="下相机生成流程"></a>下相机生成流程</h3><p>抓取圆和直线（得到坐标XY以及偏转R，发送数据给上位机，完成物理坐标调整，实现对位贴合）</p>
+<p>下相机的抓圆和抓直线也需要和上相机的抓圆和抓直线对上，（直线的起始点为大圆圆心，那么下相机也应该为大圆的圆心，保证一一能够对应得上）</p>
 <ul>
-<li>镜头参数</li>
+<li>详细教学：<a target="_blank" rel="noopener" href="https://www.v-club.com/vCollage/vCollageDetail/219">https://www.v-club.com/vCollage/vCollageDetail/219</a></li>
 </ul>
-<p>靶面尺寸：镜头靶面尺寸一定要大于相机的芯片靶面尺寸。</p>
-<p>焦距：影响物距。同样视野下，并聚焦，焦距越大，物距越远；焦距和物距成正比关系 </p>
-<p>焦距f ＝ WD（物距） × 相机芯片尺寸( h or v) / FOV视场( H or V)</p>
-<p>光圈：光圈越大，支持越短的曝光时间。 光圈越小，景深越大。 镜头最佳成像质量光圈，一般在最大光圈，回缩一点的位置。比如F2.4光圈镜头，最佳成像质量就是2.2-2 的位置。（主观看法，没有试验依据）</p>
-<p>镜头接口：要与相机接口一致，常用C口接口。</p>
-<p>线对：0.3以上的线对才有意义。 比如200线对，就是 1mm范围内，有200对黑白相间的线条。  白色线条成像灰度是 GW， 黑色线条成像灰度是GB（参考MTF曲线图）</p>
-<p>计算：r = GW-GB/GW+GB </p>
-<p>r&gt;0.3以上    </p>
-<p>比如： GW = 170， GB= 80   </p>
-<p> r = 170-80/170+80 = 0.36  </p>
-<h3 id="海康视觉硬件选型"><a href="#海康视觉硬件选型" class="headerlink" title="海康视觉硬件选型"></a>海康视觉硬件选型</h3><p>可以前往海康机器人官网 进行硬件选型，根据指示和参数进行填写，即可获取符合需求的镜头型号</p>
-<p><a target="_blank" rel="noopener" href="https://www.hikrobotics.com/cn/machinevision/visionproduct?typeId=40&amp;id=247">https://www.hikrobotics.com/cn/machinevision/visionproduct?typeId=40&amp;id=247</a></p>
-<p><img src="https://img2.imgtp.com/2024/03/30/oOaTnbO4.png"></p>
 
                 
             </div>
@@ -444,7 +421,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ViktorChen06.github.io/2024/03/30/%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B/">http://ViktorChen06.github.io/2024/03/30/%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B/</a>
+                    <a href="http://ViktorChen06.github.io/2024/04/09/%E6%A0%87%E5%AE%9A%E7%9F%A5%E8%AF%86/">http://ViktorChen06.github.io/2024/04/09/%E6%A0%87%E5%AE%9A%E7%9F%A5%E8%AF%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -482,8 +459,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86/">
-                                    <span class="chip bg-color">硬件知识</span>
+                                <a href="/tags/Vision-Master/">
+                                    <span class="chip bg-color">Vision Master</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">
+                                    <span class="chip bg-color">机器视觉</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%A0%87%E5%AE%9A/">
+                                    <span class="chip bg-color">标定</span>
                                 </a>
                             
                         </div>
@@ -746,9 +731,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2024/04/09/%E6%A0%87%E5%AE%9A%E7%9F%A5%E8%AF%86/">
                     <div class="card-image">
@@ -766,9 +752,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -777,6 +763,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -803,13 +790,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/03/23/%E5%8D%95%E7%82%B9%E6%8A%93%E5%8F%96/">
+                <a href="/2024/03/30/%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="单点抓取--Vision Master">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="相机镜头硬件选型--机器视觉">
                         
-                        <span class="card-title">单点抓取--Vision Master</span>
+                        <span class="card-title">相机镜头硬件选型--机器视觉</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,7 +807,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-30
                             </span>
                         <span class="publish-author">
                             
@@ -833,12 +820,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vision-Master/">
-                        <span class="chip bg-color">Vision Master</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">
-                        <span class="chip bg-color">机器视觉</span>
+                    <a href="/tags/%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">硬件知识</span>
                     </a>
                     
                 </div>

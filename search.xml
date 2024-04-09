@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>标定知识--Vision Master</title>
+      <link href="/2024/04/09/%E6%A0%87%E5%AE%9A%E7%9F%A5%E8%AF%86/"/>
+      <url>/2024/04/09/%E6%A0%87%E5%AE%9A%E7%9F%A5%E8%AF%86/</url>
+      
+        <content type="html"><![CDATA[<h3 id="上下相机对位贴合标定项目"><a href="#上下相机对位贴合标定项目" class="headerlink" title="上下相机对位贴合标定项目"></a>上下相机对位贴合标定项目</h3><p>常用下相机进行标定，然后用‘映射标定’模块，配合海康Ⅱ型标定板进行上下相机标定映射</p><h3 id="下相机标定工作"><a href="#下相机标定工作" class="headerlink" title="下相机标定工作"></a>下相机标定工作</h3><p>使用通讯的方式，接收上位机的XYR坐标参数，然后使用‘平移旋转标定’模块（固定都使用该模块，其它模块算法功能可能存在有问题）</p><p>标定类型：平移旋转标定（9点平移 + N点旋转）</p><p>自由度：选择‘缩放、旋转、纵横比、倾斜及平移’（固定）</p><p>坐标输入：图像坐标选择模板匹配或较为明显的特征点坐标，物理坐标填入上位机通讯发送过来的物理坐标数据</p><p>图像角度、物理角度：前者填入图像某个边或者比较好抓的特征边沿（能够很好地表达出物料旋转角度的地方），物理角度填入上位机发送过来的角度数据</p><p>标定文件选择‘更新文件’、标定文件路径</p><p>点击‘清空标定点’（注意清空后不要点击模块的执行，点击后会生成一个点的坐标信息）</p><h3 id="上相机映射"><a href="#上相机映射" class="headerlink" title="上相机映射"></a>上相机映射</h3><p>使用海康Ⅱ型标定板，放在上相机位放料位取图一张，然后吸取标定板到下相机位进行拍照取图，使用这两张图片进行标定映射（使用‘映射标定’模块，加载下相机标定文件，以及上下相机的两张图片，自动完成坐标信息的映射）</p><p>需要注意的是，‘映射标定’模块的图像顺序需要留意，上相机在前，下相机在后</p><p>并且需要将更新文件使能打开</p><h3 id="上相机生产流程"><a href="#上相机生产流程" class="headerlink" title="上相机生产流程"></a>上相机生产流程</h3><p>上相机做初步抓取，抓取到产品特征后，将特征点位的XY以及角度输入给到‘单点映射对位’</p><h5 id="单点映射对位需要注意的点"><a href="#单点映射对位需要注意的点" class="headerlink" title="单点映射对位需要注意的点"></a>单点映射对位需要注意的点</h5><p>模块中，对象像素点，指的是下相机位拍照的第五点坐标（0，0，0）对应的图片像素参数，比如在下相机拍照第五点特征点的像素坐标参数，应当进行记录</p><p>目标像素点：为上相机生产时，某个特征的坐标点的数据，一般做点点测量，以直线的中心点作为目标像素点</p><p>目标像素直线起点、终点：点点测量，两个点的坐标（需要注意的是，要和下相机位的点点测量一一对应，如起点为大圆的圆心，终点为小圆的圆心，都需要一一对应上）</p><p>示教物理点：下相机拍照第五点的物理坐标</p><p>最后加载N点标定文件、映射标定文件即可</p><h3 id="下相机生成流程"><a href="#下相机生成流程" class="headerlink" title="下相机生成流程"></a>下相机生成流程</h3><p>抓取圆和直线（得到坐标XY以及偏转R，发送数据给上位机，完成物理坐标调整，实现对位贴合）</p><p>下相机的抓圆和抓直线也需要和上相机的抓圆和抓直线对上，（直线的起始点为大圆圆心，那么下相机也应该为大圆的圆心，保证一一能够对应得上）</p><ul><li>详细教学：<a href="https://www.v-club.com/vCollage/vCollageDetail/219">https://www.v-club.com/vCollage/vCollageDetail/219</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Vision Master </tag>
+            
+            <tag> 机器视觉 </tag>
+            
+            <tag> 标定 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>相机镜头硬件选型--机器视觉</title>
       <link href="/2024/03/30/%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B/"/>
       <url>/2024/03/30/%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B/</url>
@@ -15,27 +38,6 @@
         <tags>
             
             <tag> 硬件知识 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>VM文档--Vision Master</title>
-      <link href="/2024/03/23/pdf/"/>
-      <url>/2024/03/23/pdf/</url>
-      
-        <content type="html"><![CDATA[<!-- <div class="row">    <embed src="./pdf.pdf" width="100%" height="550" type="application/pdf"></div> --><!-- <div class="row">    <embed src="https://pinfo.hikrobotics.com/hkws/unzip/20231101163730_26101_doc/index.html" width="100%" height="550" type="application/pdf"></div> --><p>海康机器人Vision Master软件技术手册，可下载至本地进行查阅</p><iframe src="https://pinfo.hikrobotics.com/hkws/unzip/20231101163730_26101_doc/index.html" style="width:100%; height:650px;"></iframe>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Vision Master </tag>
-            
-            <tag> 技术手册 </tag>
             
         </tags>
       
@@ -57,6 +59,27 @@
             <tag> Vision Master </tag>
             
             <tag> 机器视觉 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VM文档--Vision Master</title>
+      <link href="/2024/03/23/pdf/"/>
+      <url>/2024/03/23/pdf/</url>
+      
+        <content type="html"><![CDATA[<!-- <div class="row">    <embed src="./pdf.pdf" width="100%" height="550" type="application/pdf"></div> --><!-- <div class="row">    <embed src="https://pinfo.hikrobotics.com/hkws/unzip/20231101163730_26101_doc/index.html" width="100%" height="550" type="application/pdf"></div> --><p>海康机器人Vision Master软件技术手册，可下载至本地进行查阅</p><iframe src="https://pinfo.hikrobotics.com/hkws/unzip/20231101163730_26101_doc/index.html" style="width:100%; height:650px;"></iframe>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Vision Master </tag>
+            
+            <tag> 技术手册 </tag>
             
         </tags>
       
